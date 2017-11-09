@@ -1,0 +1,232 @@
+/* HEADER */
+header {
+	@media (min-width: $responsive-laptop) {
+		padding: 20px 0 35px 0;
+	}
+
+	&.blured {
+		position: fixed;
+		top: 0;
+		z-index: 10;
+		width: 100%;
+		left: 0;
+		background: rgba(255,255,255, .9);
+		border-bottom: 1px solid #dbdbdb;
+	}
+	.main-panel {
+		float: left;
+		padding-top: 13px;
+
+		@media (min-width: $responsive-laptop) {
+			padding-top: 23px;
+		}
+	}
+	.cart {
+		min-width: 48px;
+		position: relative;
+		height: 36px;
+		float: left;
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		&:after {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			content: '';
+			width: 25px;
+			z-index: -1;
+			height: 23px;
+			background: url("assets/images/icons.png") no-repeat 0px 0px;
+		}
+		span {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 22px;
+			font-size: 18px;
+			color: #fff;
+			background: #b69460;
+			height: 26px;
+			min-width: 26px;
+			text-align: center;
+			line-height: 26px;
+			padding: 0 2px;
+			border-radius: 12px;
+		}
+	}
+	.user {
+		padding-right: 27px;
+		position: relative;
+		padding-top: 8px;
+		float: left;
+		&:after {
+			display: block;
+			content: '';
+			width: 18px;
+			height: 23px;
+			position: absolute;
+			bottom: 6px;
+			right: 0;
+			background: url("assets/images/icons.png") no-repeat 0px -24px;
+		}
+		.welcome {
+			color: #000;
+			line-height: 8px;
+		}
+		.login {
+			a {
+				font-size: 14px;
+				color: #b69460;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.mobile-toggle {
+		float: right;
+		cursor: pointer;
+		margin-top: 21.5px;
+		margin-left: 18px;
+		img {
+			max-width: 30px;
+			display: block;
+		}
+
+		@media (min-width: $responsive-laptop) {
+			display: none;
+		}
+	}
+	.search-panel {
+		float: right;
+		padding-top: 30px;
+		display: none;
+		position: relative;
+
+		&:hover {
+			form {
+				transform: scale(1);
+			}
+		}
+
+		form {
+			position: absolute;
+			transform: scale(0);
+			top: calc(100% + 5px);
+			right: 0;
+			transition: 0.5s;
+
+			&.active {
+				transform: scale(1);
+			}
+
+			input {
+				outline: none;
+				border: 1px solid #8cc2c7;
+				padding: 0 10px;
+				max-width: 150px;
+				height: 32px;
+			}
+		}
+
+		@media (min-width: $responsive-laptop) {
+			display: block;
+		}
+		a {
+			font-size: 14px;
+			color: #898989;
+			min-height: 22px;
+			line-height: 22px;
+			position: relative;
+			padding-right: 30px;
+			padding-bottom: 7px;
+			&:hover {
+				text-decoration: underline;
+			}
+			&:before {
+				display: block;
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 21px;
+				height: 21px;
+				background: url("assets/images/icons.png") no-repeat 0px -48px;
+			}
+		}
+	}
+	nav.main-nav {
+		text-align: center;
+		max-height: 70px;
+		overflow: hidden;
+		@media (min-width: $responsive-laptop) {
+			padding-bottom: 0;
+			max-height: auto;
+			overflow: visible;
+			padding-left: 16%;
+		}
+		ul {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			padding-bottom: 20px;
+			@media (min-width: $responsive-laptop) {
+				flex-wrap: nowrap;
+				padding-bottom: 0;
+			}
+			li {
+				display: block;
+				width: 100%;
+				position: relative;
+				margin: 5px 0;
+				@media (min-width: $responsive-laptop) {
+					width: auto;
+					margin: 0;
+					&:not(:last-child) {
+						&:after {
+							display: inline-block;
+							content: '';
+							width: 1px;
+							height: 12px;
+							background: #cdcdcd;
+							margin: 0 11px;
+						}
+					}
+					&.logo,
+					&:nth-child(4) {
+						&:after {
+							background: transparent;
+						}
+					}
+				}
+				&.logo {
+					order: -1;
+					margin-right: 23px;
+					@media (min-width: $responsive-laptop) {
+						order: initial;
+					}
+
+					img {
+						max-width: 100px;
+
+						@media (min-width: $responsive-laptop) {
+							max-width: 100%;
+						}
+					}
+				}
+			}
+			a {
+				font-size: 18px;
+				color: #000;
+				&:hover {
+					color: #b69460;
+				}
+			}
+		}
+	}
+}

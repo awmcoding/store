@@ -1,0 +1,248 @@
+/* FOOTER */
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	background: #a2d5da;
+	color: #fff;
+	&>div {
+		text-align: center;
+		padding: 30px 10px;
+		@media (min-width: $responsive-laptop) {
+			padding: 50px 20px 135px;
+		}
+		.title {
+			p {
+				font-size: 30px;
+			}
+			&:after {
+				display: block;
+				content: '';
+				width: 32px;
+				height: 10px;
+				margin: 10px auto;
+			}
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+	.subscribe,
+	.contacts {
+		flex-basis: 100%;
+		max-width: 660px;
+		@media (min-width: $responsive-tablet) {
+			flex-basis: 34.375%;
+		}
+	}
+	.contacts {
+
+		.adress {
+			p {
+				margin-bottom: 10px;
+				@media (min-width: $responsive-tablet) {
+					margin-bottom: 15px;
+				}
+				&:before {
+					width: 18px;
+					height: 25px;
+					top: -2px;
+					background: url("assets/images/icons.png") no-repeat 0px -187px;
+				}
+			}
+		}
+		.adress p,
+		a {
+			display: inline-block;
+			padding-right: 36px;
+			position: relative;
+			&:before {
+				display: block;
+				content: '';
+				position: absolute;
+				right: 0;
+			}
+		}
+
+		.phone {
+			font-size: 22px;
+			color: #fff;
+			direction: ltr;
+			margin-bottom: 10px;
+			@media (min-width: $responsive-tablet) {
+				margin-bottom: 15px;
+			}
+			&:before {
+				width: 20px;
+				height: 20px;
+				top: 3px;
+				background: url("assets/images/icons.png") no-repeat 0px -214px;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.mail {
+			font-size: 18px;
+			color: #b69460;
+			&:hover {
+				color: #fff
+			}
+			&:before {
+				width: 21px;
+				height: 16px;
+				top: 2px;
+				background: url("assets/images/icons.png") no-repeat 0px -234px;
+			}
+		}
+	}
+	.social {
+		background: #8cc2c7;
+		max-width: 600px;
+		flex-basis: 100%;
+		@media (min-width: $responsive-tablet) {
+			flex-basis: 31.25%;
+		}
+		.links {
+			margin-top: 15px;
+			@media (min-width: $responsive-tablet) {
+				margin-top: 30px;
+			}
+			a {
+				display: inline-block;
+				text-indent: -100%;
+				overflow: hidden;
+				&:hover {
+					transform: rotate(15deg);
+				}
+				&:not(:last-child) {
+					margin-left: 20px;
+				}
+				&:first-child {
+					width: 36px;
+					height: 30px;
+					background: url("assets/images/icons1.png") no-repeat 0px -157px;
+				}
+				&:nth-child(2) {
+					width: 32px;
+					height: 32px;
+					background: url("assets/images/icons1.png") no-repeat 0px -125px;
+				}
+				&:nth-child(3) {
+					width: 47px;
+					height: 30px;
+					background: url("assets/images/icons1.png") no-repeat 0px -94px;
+				}
+			}
+		}
+	}
+	.subscribe {
+		@media (min-width: $responsive-laptop) {
+			padding-bottom:0px;
+		}
+		@media (max-width: $responsive-tablet) {
+			padding-bottom:0px;
+		}
+		.subscribe_text{
+			@media (min-width: $responsive-laptop) {
+				padding-top:80px;
+			}
+			@media (max-width: $responsive-tablet) {
+				padding-top:30px;
+			}
+			.logo_link{
+				float:right;
+				font-size:19px;
+				padding-top: 15px;
+				a{
+					color:#fff;
+				}
+			}
+			.ayuna_logo{
+				float:left;
+			}
+		}
+		&>p {
+			display: inline-block;
+			margin: 0 0 15px 0;
+			@media (min-width: $responsive-tablet) {
+				margin: 0 0 25px 0;
+			}
+		}
+		form {
+			width:100%;
+			max-width: 450px;
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+			position:relative;
+			.validation_error{
+				position:absolute;
+				top:-32px;
+			}
+			.gform_body{
+				margin-left: 10px;
+				width:66.6%;
+				input{
+					border: 1px solid #8cc2c7;
+					padding: 0px 10px;
+					width: 100%;
+				}
+			}
+			.gform_footer{
+				width: calc(100% - 66.6% - 10px);
+				input{
+					width:100%;
+					font-size: 20px;
+					background: transparent;
+					width: 100%;
+					color: #fff !important;
+					border-color: #fff !important;
+					display: inline-block;
+					border-width: 2px;
+					border-style: solid;
+					font-weight: 600;
+					border-radius: 0px;
+					padding: 0px;
+					&:hover{
+						border-radius: 10px 0 10px 0;
+					}
+				}
+			}
+		}
+		input {
+			height: 50px;
+		}
+		input[type="email"] {
+			width: 66.6%;
+			margin-left: 10px;
+			border: 1px solid #8cc2c7;
+			padding: 0 10px;
+		}
+		input[type="submit"] {
+			font-size: 20px;
+			background: transparent;
+			width: calc(100% - 66.6% - 10px);
+		}
+		.custum_form_submit{
+			width:calc(100% - 66.6% - 10px);
+			input[type="submit"] {
+				font-size: 20px;
+				background: transparent;
+				width: 100%;
+				color: #fff !important;
+				border-color: #fff !important;
+				display: inline-block;
+				border-width: 2px;
+				border-style: solid;
+				font-weight: 600;
+				border-radius:0px;
+				padding:0px;
+				&:hover{
+					border-radius: 10px 0 10px 0;
+				}
+			}
+
+		}
+
+	}
+}

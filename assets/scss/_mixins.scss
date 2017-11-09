@@ -1,0 +1,9 @@
+/* MIXINS */
+
+@mixin do_trans($duration: .5s, $type: all) {
+	-webkit-transition: $type $duration ease;
+	-moz-transition: $type $duration ease;
+	-ms-transition: $type $duration ease;
+	-o-transition: $type $duration ease;
+	transition: $type $duration ease;
+}

@@ -1,0 +1,108 @@
+/*!
+ * Theme Name: Basic Project
+ * Theme URI: http://www.example.com
+ * Author: ROI Escalator
+ * Author URI: http://www.roiescalator.com
+ * Description: WordPress theme by ROI Escalator
+ * Version: 1.0
+ */
+/* COMMON */
+@import "colors";
+@import "variables";
+@import "mixins";
+
+/* GENERAL */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+}
+
+.clearfix {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+a {
+	text-decoration: none;
+	transition: 0.3s;
+}
+p {
+	margin: 0;
+}
+
+body {
+	position: relative;
+	max-width: 1920px;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 16px;
+	font-family: 'Assistant', sans-serif;
+	direction: rtl;
+	color: #333333;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	li {
+		list-style-type: none;
+	}
+}
+
+.container {
+	max-width: $container-width;
+	margin: 0 auto;
+	padding: 0 10px;
+	@media (min-width: $responsive-desktop) {
+		padding: 0;
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.gfield_required{
+	display:none;
+}
+
+.screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+/* PARTIALS */
+@import "partials/header";
+@import "partials/footer";
+
+
+/* PAGES */
+@import "pages/homepage";
+@import "pages/about";
+@import "pages/collection";
+@import "pages/store";
+@import "pages/restore";
+@import "pages/product";
+@import "pages/checkout";
+@import "pages/cart";
+@import "pages/contacts";
+@import "pages/blog";
+@import "pages/blog-post";
+@import "pages/search";
